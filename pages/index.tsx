@@ -18,7 +18,7 @@ const Home = ({ exploreData, cardsData }: Props) => {
   return (
     <div className="">
       <Head>
-        <title>Airbnb Clone</title>
+        <title>Project Clone</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -80,6 +80,8 @@ export async function getStaticProps() {
 
   const cardsData = await fetch('https://www.jsonkeeper.com/b/VHHT').
   then((res) => res.json())
+
+  console.log("Card Data", cardsData);
 
   return {
     props: {
